@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>FreeCodeCamp Tribute Page</title>
+  <meta name="description" content="Create a tribute page for the brand new curriculum @freeCodeCamp.">
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <!-- <link rel="icon" href="tab_icon.png"> -->
+
+</head>
+<body>
+  <!-- define svg icons later used in the project -->
+  <svg style="display:none">
+      <symbol id="forum-icon" width="100" height="67" viewBox="0 0 26.45648 17.726856"><g transform="matrix(-.69381 0 0 .73324 27.391 -191.588)" fill="#333"><ellipse ry="7.534" rx="11.41" cy="276.821" cx="13.631" stroke="#333" stroke-width="1.748"/><path d="M6.932 282.147s-.052 2.37-3.16 3.068c0 0 5.46.967 6.373-.9z"/></g><ellipse ry="7.341" rx="9.343" cy="7.341" cx="9.343" fill="#fff"/><g transform="matrix(.69381 0 0 .73324 -.657 -195.263)" fill="#fff"><ellipse cx="13.631" cy="276.821" rx="11.41" ry="7.534" stroke="#333" stroke-width="1.748"/><path d="M6.932 282.147s-.052 2.37-3.16 3.068c0 0 5.46.967 6.373-.9z" fill="#333"/></g></symbol>
+      
+      <symbol id="book-icon" width="100" height="80" viewBox="0 0 26.457876 21.167192"><g transform="matrix(.22316 0 0 .21602 5.605 -20.008)"><path d="M34.575 112.949c12.882-3.773 24.142-8.684 54.77 0 1.786.506 3.213 1.416 3.213 3.175v74.536c0 1.76-1.433 3.175-3.213 3.175h-54.77c-1.78 0-3.212-1.416-3.212-3.175v-74.536c0-1.76 1.57-2.695 3.212-3.175z" transform="skewY(-8.794) scale(.98825 1)" fill="none" stroke="#2a2a2a" stroke-width="3.992"/><path d="M34.169 107.663c-12.73-5.743-23.858-12.375-54.126-8.373-1.765.233-3.175.925-3.175 2.683v74.537c0 1.76 1.416 3.394 3.175 3.667l54.126 8.373c1.759.272 3.175-.925 3.175-2.684v-74.537c0-1.759-1.553-2.934-3.175-3.666z" fill="none" stroke="#2a2a2a" stroke-width="3.969"/><rect ry="3.214" rx="3.139" y="107.664" x="34.019" height="79.94" width=".149" fill="none" stroke="#252525" stroke-width="3.97"/><path d="M37.344 107.663c8.422-5.35 13.345-15.988 43.957-12.607 0 0 2.579 1.984 2.579 3.742v74.008c0 1.76-1.116 3.616-2.579 3.666-37.907 1.293-31.419 6.94-43.957 10.49-1.388.393-2.578-.925-2.578-2.684v-72.95c0-1.758 1.318-2.865 2.578-3.665z" fill="#fff" stroke="#2a2a2a" stroke-width="3.577"/><path d="M33.602 107.664c-8.423-5.35-13.346-15.989-43.958-12.607 0 0-2.578 1.983-2.578 3.742v74.008c0 1.759 1.116 3.616 2.578 3.666 37.908 1.293 31.42 6.94 43.958 10.49 1.387.393 2.578-.925 2.578-2.684v-72.95c0-1.758-1.319-2.865-2.578-3.665z" fill="#fff" stroke="#2a2a2a" stroke-width="3.577"/><path d="M-3.981 113.413s21.87.267 29.344 7.475M-3.981 133.169s21.87.267 29.344 7.475M-3.981 153.992s21.87.267 29.344 7.475M75.069 113.413s-21.87.267-29.345 7.475M75.069 133.169s-21.87.267-29.345 7.475M75.069 153.992s-21.87.267-29.345 7.475" fill="none" stroke="#2a2a2a" stroke-width="3.229" stroke-linecap="round"/></g></symbol>
+  </svg>
+
+  <!-- 
+    in a wrapping div include:
+    - a section for the header and image introducing the subject of the tribute page
+    - a div detailing information on the chosen subject
+  -->
+
+  <div id="main">
+    <!-- nest the header and div element in a section, to have them both share the same background -->
+    <section>
+
+      <header id="title">
+        <h1>You can learn how to code</h1>
+      </header>
+
+      <div id="img-div">
+        <img src="https://design-style-guide.freecodecamp.org/downloads/freeCodeCamp.png" alt="freeCodeCamp Logo" id="image">
+        <p id="img-caption">Learn to Code and Help Nonprofits</p>
+      </div>
+    
+    </section><!-- close the section -->
+
+
+    <div id="tribute-info">
+      <p>
+        <span>
+          freeCodeCamp
+        </span> 
+        is a non-profit organization which allows anyone to learn web development in particular and programming in general.
+      </p>
+
+      <p>In its online 
+        <a href="https://www.freecodecamp.org/" id="tribute-link" target="_blank">
+          curriculum
+        </a>
+        , it offers several certifications on 
+        <span>
+          web-development
+        </span>
+        , regarding front-end, back-end, and even data visualization.
+      </p>
+
+      <p>
+        Beside the curriculum, the organization manifests itself in multiple, helpful 
+        <span>
+          resources
+        </span>.
+      </p>
+
+      <div class="tribute-info-details">
+        <div>
+            <p>A prolific medium
+              <a href="https://medium.freecodecamp.org/">
+                publication
+              </a>
+            </p>
+            <svg>
+              <use href="#book-icon"/>
+            </svg>
+        </div><!-- close the div nesting the fcc medium publication and explanatory SVG icon -->
+        
+        <div>
+          <svg>
+            <use href="#forum-icon"/>
+          </svg>
+          <p>
+            A bountiful, web-oriented 
+            <a href="https://forum.freecodecamp.org/">
+              forum
+            </a>
+          </p>
+        </div><!-- close the div nesting the fcc forum and explanatory SVG icon -->
+
+      </div><!-- close the .tribute-info-details div -->
+      
+    </div><!-- close the .tribute-info div -->
+
+    <!-- include a footer with a signature -->
+    <footer>
+      Build with 
+      <!-- with a span element build a simple heart icon -->
+      <span></span>
+      , 
+      <a href="https://twitter.com/borntofrappe">
+        BtF
+      </a>
+    </footer>
+
+  </div><!-- close the all wrapping div -->
+
+
+</body>
+</html>

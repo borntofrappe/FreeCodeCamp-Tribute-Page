@@ -2,7 +2,7 @@
 
 Create a tribute page for the brand new curriculum @freeCodeCamp.
 
-Link to the work-in-progress pen right [here]().
+Link to the working pen right [here](https://codepen.io/borntofrappe/full/oyBJJO/).
 
 ## Preface 
 
@@ -23,15 +23,15 @@ This project in particular is centered around the creation of a tribute page. Th
 
 The page ought to have:
 
-- [ ] an element with `id="main"`, nesting the contents of the page;
+- [x] an element with `id="main"`, nesting the contents of the page;
 
-- [ ] an element with `id="title"` with text describing the subject of the page;
+- [x] an element with `id="title"` with text describing the subject of the page;
 
-- [ ] a `div` with `id="img-div"`, nesting an `img` with `id="image"` and an element with `id="img-caption"`, with text describing the image element;
+- [x] a `div` with `id="img-div"`, nesting an `img` with `id="image"` and an element with `id="img-caption"`, with text describing the image element;
 
-- [ ] an element with `id="tribute-info"` containing a description of the subject of the page;
+- [x] an element with `id="tribute-info"` containing a description of the subject of the page;
 
-- [ ] an anchor link `a` element with `id="tribute-link"` redirecting toward a source with additional information on the subject. 
+- [x] an anchor link `a` element with `id="tribute-link"` redirecting toward a source with additional information on the subject. 
 
 **Additional Notes**:
 
