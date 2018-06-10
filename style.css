@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css?family=Lato");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  min-height: 100vh;
+  width: 100%;
+  font-family: 'Lato', sans-serif;
+  color: #2a2a2a;
+  background-color: #fff;
+}
+div#main section {
+  background-color: #006400;
+  color: #fff;
+}
+div#main section header#title {
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem 2rem;
+}
+div#main section header#title h1 {
+  text-transform: uppercase;
+  font-size: 2.8rem;
+  font-weight: 300;
+  text-align: center;
+  position: relative;
+}
+div#main section header#title h1:before,
+div#main section header#title h1:after {
+  position: absolute;
+  font-size: 3rem;
+  top: -5px;
+}
+div#main section header#title h1:before {
+  content: '(';
+  left: -18px;
+}
+div#main section header#title h1:after {
+  content: ')';
+  right: -18px;
+}
+div#main section div#img-div {
+  padding: 4rem 2rem;
+  max-width: 800px;
+  margin: 5rem auto 0;
+  text-align: center;
+}
+div#main section div#img-div img#image {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+div#main section div#img-div p#img-caption {
+  font-style: italic;
+  font-size: 1.7rem;
+  margin: 1rem 0 0;
+}
+div#main div#tribute-info {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 4rem auto;
+}
+div#main div#tribute-info p {
+  font-size: 1.4rem;
+  margin: 0 0 2.5rem;
+  padding: 0 1.5rem;
+  line-height: 1.5;
+}
+div#main div#tribute-info p a {
+  color: inherit;
+  text-decoration: none;
+  position: relative;
+}
+div#main div#tribute-info p a:before,
+div#main div#tribute-info p a:after {
+  content: '';
+  position: absolute;
+  height: 3px;
+  bottom: -1px;
+}
+div#main div#tribute-info p a:before {
+  left: 0;
+  width: 100%;
+  background: #2a2a2a;
+}
+div#main div#tribute-info p a:after {
+  left: 50%;
+  width: 0;
+  background: #006400;
+  transition: all 0.2s ease-out;
+}
+div#main div#tribute-info p a:hover:after {
+  left: 0;
+  width: 100%;
+}
+div#main div#tribute-info p span {
+  font-weight: bold;
+}
+div#main div#tribute-info div.tribute-info-details div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5rem;
+}
+div#main div#tribute-info div.tribute-info-details div p {
+  margin-bottom: 0;
+}
+div#main div#tribute-info div.tribute-info-details div svg {
+  width: 100px;
+  height: auto;
+}
+div#main footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #2a2a2a;
+  color: #fff;
+  padding: 1rem 1.5rem;
+}
+div#main footer span {
+  width: 15px;
+  height: 15px;
+  margin: 0 0.8rem;
+  background: #fff;
+  position: relative;
+  transform: rotate(45deg);
+}
+div#main footer span:before,
+div#main footer span:after {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #fff;
+}
+div#main footer span:before {
+  bottom: 60%;
+  right: 0;
+}
+div#main footer span:after {
+  bottom: 0;
+  right: 60%;
+}
+div#main footer a {
+  color: inherit;
+  text-decoration: none;
+}
+@media screen and (max-width: 800px) {
+  div#main section div#img-div {
+    margin: 2rem auto;
+  }
+  div#main section div#img-div p#img-caption {
+    font-size: 1.4rem;
+  }
+  div#main div#tribute-info div.tribute-info-details div {
+    flex-direction: column;
+  }
+  div#main div#tribute-info div.tribute-info-details div:nth-of-type(2) svg {
+    order: 1;
+  }
+  div#main div#tribute-info div.tribute-info-details div p {
+    margin: 1rem 0;
+  }
+}

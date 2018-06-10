@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+// define variables used throughout the project
+font-main = 'Lato', sans-serif
+black = #2A2A2A
+white = #ffffff
+darkgreen = #006400
+
+
+*
+    box-sizing border-box
+    margin 0
+    padding 0
+  
+body
+    min-height 100vh
+    width 100%
+    font-family font-main
+    color black
+    background-color white
+
+div#main 
+
+    section
+        // for the title and image section of the page, set a background color of darkgreen and a color of a legible white
+        background-color darkgreen
+        color white 
+
+        header#title 
+            // center the title and image in the viewport
+            display flex 
+            justify-content center 
+            // padding to distance the h1 element from the surrounding window
+            padding 1.5rem 2rem
+
+            h1
+                text-transform uppercase
+                font-size 2.8rem
+                font-weight 300
+                text-align center
+                // with pseudo elements include parens around the header
+                // position relative to absolute position the parens
+                position relative
+
+                &:before, &:after
+                    // include parens around the text 
+                    position absolute 
+                    font-size 3rem
+                    top -5px
+                &:before 
+                    content '('
+                    left -18px
+                &:after
+                    content ')'
+                    right -18px
+
+        div#img-div
+            // padding to distance the image from the surrounding window and the surrounding content
+            padding 4rem 2rem
+            // max width to limit the size of the image 
+            max-width 800px
+            // horizontal margin set to auto to center the content in the page
+            margin 5rem auto 0
+            text-align center
+
+            img#image 
+                // width set to the size of the parent container (800px top, resized with the window)
+                max-width 100%
+                display block 
+                height auto
+                
+            p#img-caption
+                font-style italic
+                font-size 1.7rem
+                // margin to slightly distance the caption from the image
+                margin 1rem 0 0
+    
+    div#tribute-info
+        // display the contents of the div in a single column layout
+        display flex 
+        flex-direction column 
+        // limit the width of the div and center it with margin set to auto
+        max-width 600px
+        margin 4rem auto
+
+        p
+            font-size 1.4rem
+            // margin to distance the paragraph elements from each other
+            margin 0 0 2.5rem
+            // padding to distance the contents of the paragraph elements from the surrounding window
+            padding 0 1.5rem
+            line-height 1.5
+
+            a 
+                color inherit
+                text-decoration none
+                // include a pseudo element to change the color of the text decoration, on hover
+                // position relative to absolute position the pseudo-elements
+                position relative 
+
+                &:before, &:after
+                    content ''
+                    position absolute 
+                    height 3px
+                    bottom -1px
+
+                &:before 
+                    // set a text underline with the before pseudo element
+                    left 0
+                    width 100%
+                    background black
+
+                &:after 
+                    // include a text underline of a different color, on hover
+                    left 50%
+                    width 0
+                    background darkgreen
+                    // transition to include the text underline on hover
+                    transition all 0.2s ease-out
+
+                &:hover:after
+                    left 0
+                    width 100%
+
+            span 
+                font-weight bold
+
+        div.tribute-info-details 
+            
+            div 
+                display flex 
+                justify-content center
+                align-items center
+                margin 1.5rem
+
+                p
+                    // as the style set for the paragraph elements cascades to the element of the specific div itself, it has a margin-bottom of 2.5rem
+                    // remove the value set on margin-bottom to have the paragraph be vertically aligned with respect to the svg icons 
+                    margin-bottom 0
+                    
+                svg
+                    width 100px
+                    height auto
+
+    footer 
+        display flex 
+        justify-content center 
+        align-items center
+        background black
+        color white 
+        padding 1rem 1.5rem
+
+        span 
+            width 15px 
+            height 15px
+            margin 0 0.8rem
+            background white
+            // with pseudo element create two circles and position them at either end of the rotated square, as to create a heart-shape icon
+            position relative 
+            transform rotate(45deg)
+
+            &:before, &:after 
+                content ''
+                position absolute 
+                width 15px
+                height 15px 
+                border-radius 50%
+                background white 
+            &:before 
+                bottom 60% 
+                right 0
+            &:after
+                bottom 0
+                right 60%
+        a 
+            color inherit 
+            text-decoration none
+
+
+// for small screen devices
+@media screen and (max-width: 800px)
+    //reduce the vertical margin of the div nesting the image
+    div#main section div#img-div 
+        margin 2rem auto       
+
+        p#img-caption
+            // reduce the font size of the paragraph element
+            font-size 1.4rem    
+
+    div#main div#tribute-info div.tribute-info-details div 
+        // display paragraphs and svg icons in a column instead of a row
+        flex-direction column        
+
+        &:nth-of-type(2) svg
+            // display the second svg after the second paragraph
+            order 1
+        p
+            // increase vertical spacing of paragraph elements
+            margin 1rem 0
